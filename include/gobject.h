@@ -26,7 +26,7 @@ namespace fls_engine
         GObject *parent;
         glm::vec3 forward;
         glm::vec3 up;
-       std::shared_ptr<SObject> body;
+        std::shared_ptr<SObject> body;
         bool isActive;
 
         GObject();
@@ -37,17 +37,17 @@ namespace fls_engine
         void enable();
         void renderUI();
         std::vector<std::shared_ptr<VertexBundle> > getVertexBundles() const;
-       std::shared_ptr<GObject> removeChild(GObject *child);
+        std::shared_ptr<GObject> removeChild(GObject *child);
         // 保持世界坐标的添加
-       std::shared_ptr<GObject> removeChild(GObject *child, glm::vec3 &opos, glm::vec3 &oforward, glm::vec3 &oup);
+        std::shared_ptr<GObject> removeChild(GObject *child, glm::vec3 &opos, glm::vec3 &oforward, glm::vec3 &oup);
         void addComponent(std::shared_ptr<Component> component);
-       std::shared_ptr<GObject>  addChild(std::shared_ptr<GObject> child, glm::vec3 pos, glm::vec3 forward, glm::vec3 up);
-       std::shared_ptr<GObject>  addChild(std::shared_ptr<GObject> child, glm::vec3 pos);
-       std::shared_ptr<GObject>  addChild(std::shared_ptr<GObject> child);
+        std::shared_ptr<GObject>  addChild(std::shared_ptr<GObject> child, glm::vec3 pos, glm::vec3 forward, glm::vec3 up);
+        std::shared_ptr<GObject>  addChild(std::shared_ptr<GObject> child, glm::vec3 pos);
+        std::shared_ptr<GObject>  addChild(std::shared_ptr<GObject> child);
         void changeParent(GObject *parent,std::shared_ptr<GObject> self);
         void reset();
         GObject *clone() const;
-       std::shared_ptr<GObject> getChild(unsigned ind) const;
+        std::shared_ptr<GObject> getChild(unsigned ind) const;
         glm::mat4 getModelMat() const;
         glm::mat4 getWorldMat() const;
         glm::mat4 getLookAtMat() const;

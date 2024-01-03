@@ -27,3 +27,6 @@ You will get libflengine.a
 
 see lab6 in <https://github.com/FlashLizard/OrangePiLab.git>, 
 it is a Minecraft demo using this engine. 
+
+## 5. usage
+
